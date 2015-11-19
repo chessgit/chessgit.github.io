@@ -61,6 +61,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hello" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/19/hello/" class="article-date">
+  <time datetime="2015-11-19T14:02:13.000Z" itemprop="datePublished">2015-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/19/hello/">hello2222222222</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>kldsjflkdsjlfk的十分空间的思考废话都是飞第三方多少了放假独守空房京东上开发多少减肥来看电视剧罚款了大煞风景多少房价都是分多少看风景的深刻了减肥代理商卡积分都是咖啡机电视卡积分了看电视剧罚款的洛杉矶可达森林监管分类的时间了空间了看电视剧辅导考试了减肥的深刻了减肥独守空房来见的实力靠凡事都了放假ds</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/11/19/hello/" data-id="cih6b4g2i0000cywvctfgi7e5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/19/hexo/" class="article-date">
@@ -83,61 +120,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="静态博客教程_1：hexo_+_github">静态博客教程 1：hexo + github</h1><p>标签（空格分隔）： hexo github blog</p>
-<hr>
+        <hr>
 <p>原理：用 <a href="https://hexo.io/" target="_blank" rel="external">hexo</a> 在本机搞定 blog，然后丢去 <a href="https://github.com/" target="_blank" rel="external">github</a>，嗯..就是这样的 </p>
-<p>##基本步骤：</p>
-<blockquote>
-<ol>
+<h2 id="基本步骤：">基本步骤：</h2><ul>
 <li>安装 hexo</li>
 <li>在本地倒弄 blog</li>
 <li>部署到 Github</li>
-<li>品尝胜利果实</li>
-</ol>
-</blockquote>
+<li><p>品尝胜利果实</p>
 <hr>
-<h1 id="1-_安装_hexo">1. 安装 hexo</h1><p>####安装下面的程序：</p>
-<blockquote>
-<ol>
+</li>
+</ul>
+<h1 id="1-_安装_hexo">1. 安装 hexo</h1><h4 id="安装下面的程序：">安装下面的程序：</h4><ol>
 <li>Node.js</li>
 <li>Git</li>
 </ol>
-</blockquote>
-<p>###1.1. 安装 Node.js<br>看个人喜欢安装 Node.js，可以找网上相关教程。我喜欢下载源码，原滋原味。<br>上官网的下载页面( <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js</a>)，下载 Source Code ,下回来的是压缩包如：node-v4.2.2.tar.gz。<br>找个位置解压，进去解压的文件目录。你会发现好多文件，如configure。（PS：对了，有木有觉得 configure[^footnote]总是出现呢？有兴趣了解它的可以看它注脚。）<br>运行下面三条命令。<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ./configure </span><br><span class="line">sudo <span class="built_in">make</span></span><br><span class="line">sudo <span class="built_in">make</span> install</span><br></pre></td></tr></table></figure></p>
+<h3 id="1-1-_安装_Node-js">1.1. 安装 Node.js</h3><p>看个人喜欢安装 Node.js，可以找网上相关教程。我喜欢下载源码，原滋原味。<br>上官网的下载页面( <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js</a>)，下载 Source Code ,下回来的是压缩包如：node-v4.2.2.tar.gz。<br>找个位置解压，进去解压的文件目录。你会发现好多文件，如configure。（PS：对了，有木有觉得 configure[^footnote]总是出现呢？有兴趣了解它的可以看它注脚。）<br>运行下面三条命令。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo ./configure </span><br><span class="line"><span class="variable">$ </span>sudo make</span><br><span class="line"><span class="variable">$ </span>sudo make install</span><br></pre></td></tr></table></figure>
 <p>经过漫长的等待……<br>    嘻嘻，可以检查安装是否成功：</p>
-<blockquote>
 <ul>
 <li>node -v</li>
 </ul>
-</blockquote>
 <p>出现版本号如：v4.2.2<br>哦也，成功。</p>
-<p>###2.2.安装 Git</p>
-<p>请看<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">大神</a>链接<br>要注意的是，在 Github 创建和你用户名对应的 repository<br>格式：user_name.github.io<br>如我的用户名为 chessgit<br>so：chessgit.github.io<br>你懂得。</p>
+<h3 id="2-2-安装_Git">2.2.安装 Git</h3><p>请看<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">大神</a>链接<br>要注意的是，在 Github 创建和你用户名对应的 repository<br>格式：user_name.github.io<br>如我的用户名为 chessgit<br>so：chessgit.github.io<br>你懂得。</p>
 <p>#2. 在本地倒弄 blog</p>
-<p>###2.1 hexo init</p>
-<p>在电脑中建个文件夹（看你个人喜好）。执行下面的命令，初始化 hexo 。</p>
+<h3 id="2-1_hexo_init">2.1 hexo init</h3><p>在电脑中建个文件夹（看你个人喜好）。执行下面的命令，初始化 hexo 。</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">[info] Copying data</span><br><span class="line">[info] You are almost done! Don't forget <span class="keyword">to</span> <span class="command">run</span> `npm install` <span class="keyword">before</span> you start b</span><br><span class="line">logging <span class="keyword">with</span> Hexo!</span><br></pre></td></tr></table></figure>
 <p>hexo 随后会自动在目标文件夹建立网站所需要的文件。然后按照提示，运行 npm install</p>
-<blockquote>
 <ul>
 <li>npm install</li>
 </ul>
-</blockquote>
 <p>细心对比一下，嘻嘻，有木有发现多了一个文件夹： node_modules[^footnote2]。</p>
-<p>###2.2 启动 server<br>在刚才文件夹，执行：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">[info] Hexo <span class="keyword">is</span> running at http:<span class="comment">//localhost:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="2-2_启动_server">2.2 启动 server</h3><p>在刚才文件夹，执行：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">[info] Hexo <span class="keyword">is</span> running at http:<span class="comment">//localhost:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure></p>
 <p>表明Hexo Server已经启动了，在浏览器中打开 <a href="http://localhost:4000/，这时可以看到Hexo已为你生成了一篇blog。" target="_blank" rel="external">http://localhost:4000/，这时可以看到Hexo已为你生成了一篇blog。</a></p>
 <p>你可以按Ctrl+C 停止Server。</p>
 <p>#3. 部署到 Github<br>3.1 修改_config.yml<br>部署到Github前需要配置_config.yml文件，首先找到下面的内容<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>:</span></span><br><span class="line">然后将它们修改为</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>: git</span></span><br><span class="line">  repository: git@github.com:chessgit/chessgit.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
 <p>3.2 执行命令：</p>
-<blockquote>
 <ul>
 <li>npm install hexo-deployer-git –save</li>
 </ul>
-</blockquote>
 <p>3.3 hexo generate<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="number">INF</span>O  Files loaded <span class="operator">in</span> <span class="number">599</span> <span class="keyword">ms</span></span><br><span class="line"><span class="title">INFO</span>  <span class="number">0</span> files generated <span class="operator">in</span> <span class="number">101</span> ms</span><br></pre></td></tr></table></figure></p>
 <p>3.4 hexo deploy<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Setting up Git deployment...</span><br><span class="line">.....</span><br><span class="line">分支 master 设置为跟踪来自 git@github<span class="class">.com</span>:chessgit/chessgit<span class="class">.github</span><span class="class">.io</span><span class="class">.git</span> 的远程分支 master。</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure></p>
-<p>#4. 品尝胜利果实<br>容我笑一下，哈哈哈哈哈哈哈….<br>在浏览器中输入地址，(<a href="http://chessgit.github.io/),就可以看到你的静态博客了。" target="_blank" rel="external">http://chessgit.github.io/),就可以看到你的静态博客了。</a></p>
-<p>#5. 其他神马的<br>看心情写吧。</p>
+<h1 id="4-_品尝胜利果实">4. 品尝胜利果实</h1><p>容我笑一下，哈哈哈哈哈哈哈….<br>在浏览器中输入地址，(<a href="http://chessgit.github.io/),就可以看到你的静态博客了。" target="_blank" rel="external">http://chessgit.github.io/),就可以看到你的静态博客了。</a></p>
+<h1 id="5-_其他神马的">5. 其他神马的</h1><p>看心情写吧。</p>
 <hr>
 <p>[^footnote]:configure 是个shell脚本，功能是，买家具。软件（房客）入住，总要买点家具，看缺了什么依赖包。有强迫症的可以用上–prefix=…</p>
 <p>[^footnote2]:node_modules放着由 npm 管理的各种依赖包。</p>
@@ -145,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/19/hexo/" data-id="cih6b0vew000190wvxunv2e3i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/19/hexo/" data-id="cih6b7ak20000k6wva9v1lci6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -190,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/19/hello-world/" data-id="cih6b0ve6000090wv9inp5vwo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/19/hello-world/" data-id="cih6b2se20000c2wvzb6blsp3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -215,7 +239,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -225,6 +249,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/11/19/hello/">hello2222222222</a>
+          </li>
         
           <li>
             <a href="/2015/11/19/hexo/">静态博客教程 1：hexo + github</a>
