@@ -88,7 +88,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/19/hello/" data-id="cih6cpevz0002qmwviqb0z98v" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/19/hello/" data-id="cih6dos9c0002viwvuj3ttkd8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,14 +126,12 @@
 <li>安装 hexo</li>
 <li>在本地倒弄 blog</li>
 <li>部署到 Github</li>
-<li>品尝胜利果实</li>
 </ul>
-<hr>
 <h1 id="1-_安装_hexo">1. 安装 hexo</h1><h4 id="安装下面的程序：">安装下面的程序：</h4><ol>
 <li>Node.js</li>
 <li>Git</li>
 </ol>
-<h3 id="1-1-_安装_Node-js">1.1. 安装 Node.js</h3><p>看个人喜欢安装 Node.js，可以找网上相关教程。我喜欢下载源码，原滋原味。<br>上官网的下载页面( <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js</a>)，下载 Source Code ,下回来的是压缩包如：node-v4.2.2.tar.gz。<br>找个位置解压，进去解压的文件目录。你会发现好多文件，如configure。（PS：对了，有木有觉得 configure[^footnote]总是出现呢？有兴趣了解它的可以看它注脚。）<br>运行下面三条命令。</p>
+<h3 id="1-1-_安装_Node-js">1.1. 安装 Node.js</h3><p>看个人喜欢安装 Node.js，可以找网上相关教程。我喜欢下载源码，原滋原味。<br>上官网的下载页面( <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js</a>)，下载 Source Code ,下回来的是压缩包如：node-v4.2.2.tar.gz。<br>找个位置解压，进去解压的文件目录。你会发现好多文件，如configure。（PS：对了，有木有觉得 configure[1]总是出现呢？有兴趣了解它的可以看它注脚。）<br>运行下面三条命令。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo ./configure </span><br><span class="line"><span class="variable">$ </span>sudo make</span><br><span class="line"><span class="variable">$ </span>sudo make install</span><br></pre></td></tr></table></figure>
 <p>经过漫长的等待……<br>    嘻嘻，可以检查安装是否成功：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">node</span><span class="identifier"> </span><span class="title">-v</span></span><br><span class="line">v4.<span class="number">2.2</span></span><br></pre></td></tr></table></figure></p>
 <p>如果出现版本号<br>哦也，成功了。</p>
@@ -143,7 +141,7 @@
 <p>hexo 随后会自动在目标文件夹建立网站所需要的文件。然后按照提示，运行 npm install<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure></p>
 <p>细心对比一下，嘻嘻，有木有发现多了一个文件夹： node_modules[^footnote2]。</p>
 <h3 id="2-2_启动_server">2.2 启动 server</h3><p>在刚才文件夹，执行：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">[info] Hexo <span class="keyword">is</span> running at http:<span class="comment">//localhost:4000/. Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure></p>
-<p>表明Hexo Server已经启动了，在浏览器中打开 (<a href="http://localhost:4000/)，这时可以看到Hexo已为你生成了一篇blog。" target="_blank" rel="external">http://localhost:4000/)，这时可以看到Hexo已为你生成了一篇blog。</a></p>
+<p>表明Hexo Server已经启动了，在浏览器中打开 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>，这时可以看到Hexo已为你生成了一篇blog。</p>
 <p>你可以按Ctrl+C 停止Server。</p>
 <h1 id="3-_部署到_Github">3. 部署到 Github</h1><p>3.1 修改_config.yml<br>部署到Github前需要配置_config.yml文件，首先找到下面的内容<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>:</span></span><br><span class="line">然后将它们修改为</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="title">deploy</span>:</span><br><span class="line">  <span class="typedef"><span class="keyword">type</span>: git</span></span><br><span class="line">  repository: git@github.com:chessgit/chessgit.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
 <p>3.2 执行命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
@@ -152,13 +150,13 @@
 <h1 id="4-_品尝胜利果实">4. 品尝胜利果实</h1><p>容我笑一下，哈哈哈哈哈哈哈….<br>在浏览器中输入地址，(<a href="http://chessgit.github.io/),就可以看到你的静态博客了。" target="_blank" rel="external">http://chessgit.github.io/),就可以看到你的静态博客了。</a></p>
 <h1 id="5-_其他神马的">5. 其他神马的</h1><p>看心情写吧。</p>
 <hr>
-<p>[^footnote]:configure 是个shell脚本，功能是，买家具。软件（房客）入住，总要买点家具，看缺了什么依赖包。有强迫症的可以用上–prefix=…</p>
+<p>[1]:configure 是个shell脚本，功能是，买家具。软件（房客）入住，总要买点家具，看缺了什么依赖包。有强迫症的可以用上–prefix=…</p>
 <p>[^footnote2]:node_modules放着由 npm 管理的各种依赖包。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/19/hexo/" data-id="cih6cpevq0001qmwv5vs49two" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/19/hexo/" data-id="cih6dos920001viwvtuq1jr3d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/19/hello-world/" data-id="cih6cpev20000qmwv1haj7cob" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/19/hello-world/" data-id="cih6dos8c0000viwvc3moclwq" class="article-share-link">Share</a>
       
       
     </footer>
